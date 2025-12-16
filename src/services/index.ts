@@ -3,6 +3,7 @@ import Card02 from "../assets/img/card02.png";
 import Card03 from "../assets/img/card03.png";
 import Card04 from "../assets/img/card04.png";
 import Card05 from "../assets/img/card05.png";
+import Card06 from "../assets/img/card06.png";
 
 export const slides = [
   {
@@ -28,6 +29,12 @@ export const slides = [
     title: "Mercado rápido",
     description: "Ecommerce para o seu negócio.",
     image: Card03,
+  },
+  {
+    id: 5,
+    title: "Pokedéx",
+    description: "Consumo da API do Pokedéx.",
+    image: Card06,
   },
 ];
 export const cards = [
@@ -56,11 +63,11 @@ export const cards = [
     image: Card05,
     link: "https://saas-dashboard-flame.vercel.app",
   },
-  // {
-  //   id: 6,
-  //   image: "https://picsum.photos/id/1035/800/400",
-  //   link: "https://google.com",
-  // },
+  {
+    id: 6,
+    image: Card06,
+    link: "https://pokedex-kaique.netlify.app",
+  },
   // {
   //   id: 7,
   //   image: "https://picsum.photos/id/1025/800/400",
