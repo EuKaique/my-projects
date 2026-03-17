@@ -4,6 +4,7 @@ import Card03 from "../assets/img/card03.png";
 import Card04 from "../assets/img/card04.png";
 import Card05 from "../assets/img/card05.png";
 import Card06 from "../assets/img/card06.png";
+import Card07 from "../assets/img/card07.png";
 
 export const slides = [
   {
@@ -20,9 +21,9 @@ export const slides = [
   },
   {
     id: 3,
-    title: "Netflix Clone",
-    description: "Protótipo de clone da Netflix.",
-    image: Card02,
+    title: "Lista de compras",
+    description: "Sistema de gerenciamento de compras",
+    image: Card07,
   },
   {
     id: 4,
@@ -68,34 +69,9 @@ export const cards = [
     image: Card06,
     link: "https://pokedex-kaique.netlify.app",
   },
-  // {
-  //   id: 7,
-  //   image: "https://picsum.photos/id/1025/800/400",
-  //   link: "https://google.com",
-  // },
-  // {
-  //   id: 1,
-  //   image: "https://picsum.photos/id/1035/800/400",
-  //   link: "https://google.com",
-  // },
-  // {
-  //   id: 8,
-  //   image: "https://picsum.photos/id/1025/800/400",
-  //   link: "https://google.com",
-  // },
-  // {
-  //   id: 9,
-  //   image: "https://picsum.photos/id/1035/800/400",
-  //   link: "https://google.com",
-  // },
-  // {
-  //   id: 10,
-  //   image: "https://picsum.photos/id/1025/800/400",
-  //   link: "https://google.com",
-  // },
-  // {
-  //   id: 11,
-  //   image: "https://picsum.photos/id/1025/800/400",
-  //   link: "https://google.com",
-  // },
+  {
+    id: 7,
+    image: Card07,
+    link: "https://shoplistall.netlify.app",
+  }
 ];
