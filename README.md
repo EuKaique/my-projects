@@ -1,73 +1,105 @@
-# React + TypeScript + Vite
+# My Projects
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicacao frontend criada para apresentar projetos em formato de portfolio visual. A pagina exibe um carrossel com destaques e uma grade com todos os projetos, cada um apontando para sua respectiva demo.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto foi pensado como uma vitrine simples e direta:
 
-## React Compiler
+- carrossel com animacoes e troca automatica de slides
+- lista de cards clicaveis com links externos para os projetos
+- layout construído com `styled-components`
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Tecnologias
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Vite
+- Styled Components
+- Framer Motion
+- Lucide React
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Como executar
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Pre-requisitos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js 18+ recomendado
+- npm
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Instalacao
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Ambiente de desenvolvimento
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Por padrao, o Vite disponibiliza a aplicacao em `http://localhost:5173`.
+
+### Build de producao
+
+```bash
+npm run build
+```
+
+### Preview da build
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Estrutura do projeto
+
+```text
+src/
+  assets/
+    img/                # imagens usadas nos projetos
+  components/
+    Cards/              # grade com todos os projetos
+    Slides/             # carrossel principal
+  page/
+    index.tsx           # composicao da pagina
+    styled.ts           # estilos de layout
+  services/
+    index.ts            # dados dos slides e cards
+  main.tsx              # ponto de entrada da aplicacao
+```
+
+## Como atualizar os projetos exibidos
+
+Os dados da pagina ficam centralizados em `src/services/index.ts`.
+
+- `slides`: controla os itens exibidos no carrossel principal
+- `cards`: controla a grade com todos os projetos e seus links
+
+Para adicionar um novo projeto:
+
+1. adicione a imagem em `src/assets/img`
+2. importe a imagem em `src/services/index.ts`
+3. inclua o item desejado no array `slides` e/ou `cards`
+
+## Comportamento da interface
+
+- o carrossel troca automaticamente a cada 5 segundos
+- o usuario tambem pode navegar manualmente pelas setas laterais
+- os indicadores inferiores permitem saltar para um slide especifico
+- os cards abrem os projetos em uma nova aba
+
+## Observacoes
+
+- o rodape aponta para o perfil do autor no GitHub
+- o conteudo atual do portfolio esta em portugues
+
+## Licenca
+
+Este projeto esta licenciado sob a licenca MIT. Consulte o arquivo `LICENSE` para mais detalhes.
