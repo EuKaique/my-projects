@@ -5,6 +5,7 @@ import Card04 from "../assets/img/card04.png";
 import Card05 from "../assets/img/card05.png";
 import Card06 from "../assets/img/card06.png";
 import Card07 from "../assets/img/card07.png";
+import Card08 from "../assets/img/card08.png";
 
 export const slides = [
   {
@@ -73,5 +74,10 @@ export const cards = [
     id: 7,
     image: Card07,
     link: "https://shoplistall.netlify.app",
-  }
+  },
+  {
+    id: 7,
+    image: Card08,
+    link: "https://quizquestionandresponses.netlify.app",
+  },
 ];
