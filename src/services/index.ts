@@ -45,13 +45,13 @@ export const slides = [
     id: 6,
     title: "MFE Debugger",
     description: "Observe e corrija problemas recorrentes em arquiteturas de micro-frontends.",
-    image: Card07,
+    image: Card10,
   },
   {
     id: 7,
     title: "Voorstel - propostas comerciais",
     description: "O Voorstel ajuda empresas de serviços a criar propostas comerciais online, enviar links profissionais e acompanhar cada negociação em um painel simples de operar.",
-    image: Card07,
+    image: Card11,
   },
 ];
 export const cards = [
